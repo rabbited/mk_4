@@ -1,0 +1,25 @@
+{
+  "name": "mk_3",
+  "version": "1.0.0",
+  "description": "my 3rd page",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabbited/mk_3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rabbited/mk_3/issues"
+  },
+  "homepage": "https://github.com/rabbited/mk_3#readme",
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
