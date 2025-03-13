@@ -4,7 +4,7 @@
   "description": "my 3rd page",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "mk_3`": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
