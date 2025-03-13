@@ -289,6 +289,10 @@ input:where([type="text"], [type="email"]) {
   fill: var(--clr-neutral-100);
 }
 
+.social-icon:is(:hover, :focus) {
+  fill: var(--clr-accent-400);
+}
+
 @media (min-width: 47em) {
   .social-list {
     gap: var(--size-300);
@@ -549,6 +553,23 @@ input:where([type="text"], [type="email"]) {
     top: 42%;
     width: 100px;
   }
+}
+
+/* slider */
+
+.slider {
+  display: flex;
+}
+
+.slider > * {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.slider button {
+  display: block !important; /* Ensure buttons are not hidden */
+  position: absolute; 
+  z-index: 10;
 }
 
 /* utility classes */

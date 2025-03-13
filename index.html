@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/favicon-32x32.png">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./assets/image/favicon-32x32.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my third page</title>  
+    <title>my 3rd page</title>  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
   </head>
 
   <body>
     <header class="primary-header">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="+">
-            <svg style="border: 1px solid red">
+          <a href="#" aria-label="home">
+            <svg class="logo" width="146" height="24" >
               <use xlink:href="./assets/image/logo.svg#logo"></use>
             </svg>
           </a>
@@ -25,15 +26,15 @@
           </button>
           <nav class="primary-navigation" id="primary-navigation">
             <ul aria-label="Primary" role="list" class="nav-list">
-              <li><a href="+">Pricing</a></li>
-              <li><a href="+">Product</a></li>
-              <li><a href="+">About Us</a></li>
-              <li><a href="+">Careers</a></li>
-              <li><a href="+">Community</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
             </ul>
           </nav>
             <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
-        </div>`
+        </div>
       </div>
     </header>
 
@@ -86,6 +87,14 @@
       </section>
       <section class="carousel | padding-block-900 text-center">
         <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
+
+        <ul class="slider">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+
         <!-- <ul class="slider | padding-block-900">
           <li>
             <img src="./assets/image/avatar-anisha.png" alt="avatar-ali">
@@ -129,21 +138,47 @@
       <div class="container">
         <div class="primary-footer__wrapper">  
             <a class="primary-footer__logo" href="#" aria-label="home">
-              <svg style="border: 1px solid red">
+              <svg class="logo" width="146" height="24" >
                 <use xlink:href="./assets/image/logo.svg#logo"></use>
               </svg>
             </a>
 
-            <svg class="social-icon" width="50px" height="50px" style="border: 1px solid red">
-              <use xlink:href="./assets/image/social-icons.svg#icon-facebook"></use>
-            </svg>
-
-            <ul role="list" aria-label="social links">
-              <li><a aria-label="facebook" href="#"></a></li>
-              <li><a aria-label="youtube" href="+"></a></li>
-              <li><a aria-label="x" href="+"></a></li>
-              <li><a aria-label="pinterest" href="+"></a></li>
-              <li><a aria-label="instagram" href="+"></a></li>
+            <ul class="social-list" role="list" aria-label="social links">
+              <li>
+                <a aria-label="facebook" href="#">
+                  <svg class="social-icon" width="50px" height="50px">
+                    <use xlink:href="./assets/image/social-icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="youtube" href="+">
+                  <svg class="social-icon" width="50px" height="50px">
+                    <use xlink:href="./assets/image/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="x" href="+">
+                  <svg class="social-icon" width="50px" height="50px">
+                    <use xlink:href="./assets/image/social-icons.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="pinterest" href="+">
+                  <svg class="social-icon" width="50px" height="50px">
+                    <use xlink:href="./assets/image/social-icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="instagram" href="+">
+                  <svg class="social-icon" width="50px" height="50px">
+                    <use xlink:href="./assets/image/social-icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
           <div class="primary-footer__nav-wrapper">
             <nav class="footer-nav">
@@ -165,9 +200,10 @@
             </form>
             <p class="primary-footer__copyright">Copyright 2020. All Rights Reserved</p>
           <!-- </div> -->
-        </div>`
+        </div>
       </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
   </body>
 </html>
