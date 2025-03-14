@@ -555,23 +555,6 @@ input:where([type="text"], [type="email"]) {
   }
 }
 
-/* slider */
-
-.slider {
-  display: flex;
-}
-
-.slider > * {
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.slider button {
-  display: block !important; /* Ensure buttons are not hidden */
-  position: absolute; 
-  z-index: 10;
-}
-
 /* utility classes */
 
 .visually-hidden {
