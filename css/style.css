@@ -1,22 +1,10 @@
 :root {
-  --clr-accent-500: hsl(12, 60%, 45%);
-  --clr-accent-400: hsl(12, 88%, 59%);
-  --clr-accent-300: hsl(12, 88%, 75%);
-  --clr-accent-100: hsl(13, 100%, 96%);
+  --clr-primary-000: hsl(0, 0%, 0%);
 
-  --clr-primary-400: hsl(228, 39%, 23%);
-
-  --clr-neutral-900: hsl(232, 12%, 13%);
-  --clr-neutral-200: hsl(0, 0%, 97%);  
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-050: hsl(0, 0%, 70%);
-
-  --ff-primary: "Be Vietnam Pro", serif;
+  --ff-primary: "Inter", sans-serif;
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
   --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 700;
 
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
@@ -124,16 +112,7 @@ svg {
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
-  color: var(--clr-primary-400);
-}
-
-p:not([class]) {
-  color: var(--clr-neutral-050);
-  max-width: 32ch;
-}
-
-p[data-width="wide"] {
-  max-width: 42ch;
+  color: var(--clr-primary-000);
 }
 
 /* button */
@@ -408,99 +387,6 @@ input:where([type="text"], [type="email"]) {
   }
 }
 
-/* numbered items */
-
-.numbered-items {
-  counter-reset: count;
-  width: fit-content;
-  margin-inline: auto;
-}
-
-.numbered-items li {
-  counter-increment: count;
-}
-
-.numbered-items div {
-  display: grid;
-  position: relative;
-  align-items: center;
-  column-gap: var(--size-300);
-  grid-template-columns: min-content 1fr;
-}
-
-.numbered-items__title {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
-  line-height: 1;
-}
-
-.numbered-items__body {
-  grid-column: 1 / -1;
-}
-
-@media (min-width: 30em) {
-  .numbered-items__body {
-    grid-column: 2 / -1;
-  }
-}
-
-.numbered-items div::before,
-.numbered-items div::after {
-  height: 40px;
-}
-
-.numbered-items div::before {
-  content: "0" counter(count);
-  display: flex;
-  align-items: center;
-  font-weight: var(--fw-bold);
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-accent-400);
-  padding: 0 var(--size-500);
-  border-radius: 100vw;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-}
-
-@media (max-width:47em) {
-  .numbered-items div::after {
-    --bg: var(--clr-accent-100);
-    content: "";
-    display: block;
-    z-index: -1;
-    border-radius: 100vw 0 0 100vw;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    box-shadow: 20em 0 0 0 var(--bg);
-    background: var(--bg);
-  }
-}
-
-/* slider */
-
-.slider {
-  display: flex;
-  gap: var(--size-600);
-  list-style: none;
-}
-
-.slider > * {
-  position: relative;
-  padding: var(--size-800) var(--size-600) var(--size-600);
-  border-radius: var(--size-100);
-  background: var(--clr-neutral-200);
-  width: 400px;
-  flex: 0 0 auto;
-}
-
-.slider img {
-  width: var(--size-800);
-  position: absolute;
-  inset: 0;
-  margin-inline: auto;
-  top: -32px;
-}
-
 /* hero */
 
 @media (max-width: 47em) {
@@ -526,32 +412,6 @@ input:where([type="text"], [type="email"]) {
 @media (min-width: 47em) {
   .hero__image::before {
     width: 45%;
-  }
-}
-
-/* sales point */
-
-.sales-points__blog {
-  position: relative;
-}
-
-.sales-points__blog::before {
-  content: url('../assets/image/bg-tablet-pattern.svg');
-  zoom: 40%;
-  position: absolute;
-  z-index: -1;
-  left: 70%;
-  bottom: 120%;
-  width: 100px;
-}
-
-@media (min-width: 47em) {
-  .sales-points__blog::before {
-    zoom: 90%;
-    z-index: -1;
-    left: -500px;
-    top: 42%;
-    width: 100px;
   }
 }
 
