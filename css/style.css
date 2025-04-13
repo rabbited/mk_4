@@ -123,6 +123,35 @@ body {
 
 /* utility classes */
 
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.two_columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .two_columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav_wrapper {
+  display: flex;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
