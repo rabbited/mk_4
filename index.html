@@ -7,13 +7,12 @@
     <title>mk_4</title>  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="primary-header">
-      <div class="container">
-        <div class="nav_wrapper two_columns">
+    <header class="with_video">
+        <div class="nav_wrapper">
           <a href="index.html" aria-label="home">
             <div>Rory McCormick</div>
           </a>
@@ -24,10 +23,13 @@
             </a>
           </div>
         </div>
-      </div>
-      <video width="100%" height="auto" autoplay loop muted playsinline>
-        <source src="assets/vdo/rm_showreel.mp4" type="video/mp4">
-      </video> 
+        <video class="header_video" width="100%" height="auto" autoplay loop muted playsinline>
+          <source src="assets/vdo/rm_showreel.mp4" type="video/mp4">
+        </video>
+        <div class="video_caption">
+          <p>Selected work</p>
+          <p>©2024</p>
+        </div>
     </header>
     <main> 
       <section class="two_columns">
@@ -235,14 +237,14 @@
         <div>Opening hours</div>
         <div>Mon – Fri: 10:00 – 18:00</div>
       </div>
-      <div class="">
-        <div>
+      <div class="contact_us">
+        <div class="contact_detail">
           <div>Contact</div>
           <div>rory@rorymccormick.ie</div>
         </div>
-        <div>
-          <div>Socials</div>
-          <ul>
+        <div class="socials">
+          <div class="title">Socials</div>
+          <ul class="socials_detail">
             <li>Instagram</li>
             <li>LinkedIn</li>
           </ul>

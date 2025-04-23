@@ -7,13 +7,13 @@
   --clr-text: var(--clr-white);
   --clr-hover: var(--clr-gray-100);
 
-  --ff-primary: "Inter", sans-serif;
+  --ff-primary: "Inter", sans-serif; font-weight: 300; font-optical-sizing: auto; font-style: normal;
   --ff-heading: var(--ff-primary);
   --ff-body: var(--ff-primary);
 
   --fs-100: 14px;
   --fs-200: 20px;
-  --fs-300: 48px;
+  --fs-300: 42px;
   --fs-400: 84px;
 
   --fs-body: var(--fs-200);
@@ -145,11 +145,80 @@ body {
   color: var(--clr-text);
 }
 
+.title {
+  width: 100%;
+}
+
+.primary_header {
+  position: relative;
+}
+
 /* navigation */
+
+.nav_wrapper {
+  font-size: var(--fs-200);
+  width: 100%;
+  position: static;
+  padding: var(--spacing-400) var(--spacing-300);;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(--spacing-400);
+  row-gap: var(--spacing-600);
+}
+
+.with_video .nav_wrapper {
+  font-size: var(--fs-200);
+  width: 100%;
+  position: absolute;
+  padding: var(--spacing-400) var(--spacing-300);;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: var(--spacing-400);
+  row-gap: var(--spacing-600);
+  
+}
+
+@media (min-width: 768px) {
+  .nav_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .with_video .nav_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+.nav_detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* footer */
 
-/* footer navigation */
+.contact_us {
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  gap: 16px;
+}
+
+.contact_detail {
+  flex: 1
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  flex: 1
+}
+
+.socials_detail {
+  display: block;
+}
 
 /* utility classes */
 
@@ -174,28 +243,27 @@ body {
   }
 }
 
-video {
+.header_video {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.nav_wrapper {
-  font-size: var(--fs-200);
-  width: 100%;
+.video_caption {
+  width: 49.5%;
   position: absolute;
-  padding: var(--spacing-400) var(--spacing-300);;
-  z-index: 10;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
+  font-size: var(--fs-400);
+  display: grid;
+  column-gap: var(--spacing-400);
+  padding: var(--spacing-300);
 }
 
-.nav_detail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container {
-  margin-inline: auto;
+.video_caption p {
+  margin: 0;
+  line-height: 1.1;
 }
 
 .project_index {
@@ -211,7 +279,6 @@ video {
   width: 100%;
   padding-top: 66.666%;
   overflow: hidden;
-  background: #eee;
 }
 
 .thumbnail img {
@@ -226,6 +293,8 @@ video {
 
 .list_item {
   display: block;
+  font-size: var(--fs-300);
+  line-height: 1.1;
 }
 
 a {
