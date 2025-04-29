@@ -25,7 +25,7 @@
   --spacing-480: 72px;
   --spacing-500: 84px;
   --spacing-600: 96px;
-  --spacing-700: 132px;
+  --spacing-700: 124px;
   --spacing-800: 204px;
 
   --size-100: var(--spacing-100);
@@ -226,6 +226,16 @@ body {
   height: 60vh;
 }
 
+.without_video .nav_wrapper {
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .without_video .nav_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .nav_detail {
   display: flex;
   justify-content: space-between;
@@ -303,10 +313,10 @@ main > section.two_columns:nth-of-type(4) {
 }
 
 @media (min-width: 768px) {
-  .two_columns, main > section.two_columns:nth-of-type(2), main > section.two_columns:nth-of-type(3) {
+  .two_columns, main > section.two_columns:nth-of-type(2), main > section.two_columns:nth-of-type(3), main > section.two_columns:nth-of-type(4) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: var(--spacing-480);
-    padding: var(--spacing-700) var(--spacing-200);
+    row-gap: var(--spacing-700);
+    padding: var(--spacing-700) var(--spacing-300);
   }
 }
 
@@ -359,6 +369,15 @@ main > section.two_columns:nth-of-type(4) {
   right: 1rem;
   display: grid;
   padding: var(--spacing-300) var(--spacing-400);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: var(--spacing-200);
+  }
 }
 
 .project_index {
