@@ -419,16 +419,10 @@ a:hover {
   opacity: 0.7;
 }
 
-
 /* burger menu */
-
-/* Burger base */
 .burger {
   width: 30px;
   height: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -437,44 +431,64 @@ a:hover {
 }
 
 .burger span {
-  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
   height: 3px;
-  background-color: #000;
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: lightcoral;
+  border-radius: 3px;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s ease;
 }
 
-/* Animate to X */
+.burger span:nth-child(1) {
+  top: 0;
+}
+.burger span:nth-child(2) {
+  top: 10px;
+}
+.burger span:nth-child(3) {
+  top: 20px;
+}
+
 .burger.open span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+  transform: rotate(45deg);
+  top: 10px;
 }
 
 .burger.open span:nth-child(2) {
-  transform: translateY(-10px) rotate(-45deg);
+  opacity: 0;
 }
 
-/* Optional menu styling */
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* Menu */
 .menu {
   position: fixed;
   top: 0;
   right: 0;
-  background: white;
   width: 100%;
   height: 100vh;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.menu.show {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .menu a {
   margin: 20px 0;
   text-decoration: none;
   font-size: 24px;
-  color: black;
-}
-
-.menu.show {
-  display: flex;
+  color: var(--clr-white);
 }
