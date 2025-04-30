@@ -13,3 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1200) {
+    // On large screens, reset state
+    burger.classList.remove('open');
+    menu.classList.remove('show');
+  }
+});
